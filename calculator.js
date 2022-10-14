@@ -1,12 +1,21 @@
 function calc(operator, a, b) {
     let result;
-    if (operator === "add") {
-        result = a + b;
-    } else if (operator === "multi") {
-        result = a * b;
-    } else if (operator === "subtract") {
-        result = a - b;
-    } else return "unknown operator"
+    switch (operator) {
+        case "add":
+            result = a + b;
+            break;
+        
+        case "multi":
+            result = a * b;
+            break;
+
+        case "subtract":
+            result = a - b;
+            break;
+        default: 
+            return "unknown operator";
+            break;
+    }
     return result;
-  }
-console.log(calc("subtract",3,2))
+}
+console.log(calc("multi",3,2))

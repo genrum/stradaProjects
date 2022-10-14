@@ -21,4 +21,4 @@ function calc(operator, a, b) {
     }
     return result;
 }
-console.log(calc("add",3,2))
+console.log(calc("add",3,2)) // how about now?

@@ -1,8 +1,11 @@
 function calc(operator, a, b) {
     let result;
+    if (isNaN(+a)||isNaN(+b)) {
+        return "your argument(s) ain't a number";
+    }
     switch (operator) {
         case "add":
-            result = a + b;
+            result = +a + +b;
             break;
         
         case "multi":
@@ -18,4 +21,4 @@ function calc(operator, a, b) {
     }
     return result;
 }
-console.log(calc("multi",3,2))
+console.log(calc("add",3,2))
